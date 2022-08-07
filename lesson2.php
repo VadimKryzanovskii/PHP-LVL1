@@ -23,7 +23,7 @@ $userNamberTask = readline("Сколько задач вы запланиров�
 if ($userNamberTask > 0 ) {
     for ($i = $userNamberTask; $i > 0; $i-- ) {
         $namberTask = $userNamberTask - ($i-1);
-        $userTask[$namberTask] = readline("Какая задача #?$namberTask");
+        $userTask[$namberTask] = readline("Какая задача #{$namberTask}?");
         $userTaskTime[$namberTask] = (readline ("Сколько времени займет задача?"));
         //если данную задачу можно сделать без массива, покажите пример
     }
@@ -32,10 +32,10 @@ if ($userNamberTask > 0 ) {
     for ($i = $userNamberTask; $i > 0; $i-- ){
         $namberTask = $userNamberTask - ($i-1);
         $sumTaskTime += $userTaskTime[$namberTask];
-        print ("-".$userTask[$namberTask]."(".$userTaskTime[$namberTask]."ч)\n");
-         // Если вы знаете как сделать вывод без склейки напишите рабочий пример, фигурные скобки не помогают
+        print ("-{$userTask[$namberTask]}({$userTaskTime[$namberTask]}ч)\n");
+         
     }
-    print ("Примерное время выполнения плана = $sumTaskTime ч\n"); 
+    print ("Примерное время выполнения плана = {$sumTaskTime}ч\n"); 
     }
 else {
     print "Вы ввели не число или оно меньше и равно нулю\n";
