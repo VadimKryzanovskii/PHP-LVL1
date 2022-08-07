@@ -41,3 +41,34 @@ else {
     print "Вы ввели не число или оно меньше и равно нулю\n";
     goto placeToReturn; 
 }
+
+//Задание №3
+
+placeToReturn1:
+$userNamber = readline("Введите число для начала счета\n");
+
+if ($userNamber > 0) {
+    $userNamberRemainder = $userNamber % 8;
+    switch ($userNamberRemainder){
+        case 0 : echo "2\n";
+        break;
+        case 1 : echo "1\n";
+        break;
+        case 2 : echo "2\n";
+        break;
+        case 3 : echo "3\n";
+        break;
+        case 4 : echo "4\n";
+        break;
+        case 5 : echo "5\n";
+        break;
+        case 6 : echo "4\n";
+        break;
+        case 7 : echo "3\n";
+        break;
+    }
+}
+else {
+    print "Вы ввели не число или оно меньше и равно нулю\n";
+    goto placeToReturn1;
+}
